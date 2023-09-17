@@ -23,7 +23,9 @@ function PostEdit(params) {
     function () {
       async function updatePost() {
         try {
-          const response = await get(`http://localhost:5000/api/posts/${id}`);
+          const response = await get(
+            `https://qna-frontend.onrender.com/api/posts/${id}`
+          );
           setTemp(response.data);
           setPost(response.data);
         } catch (error) {
@@ -40,7 +42,7 @@ function PostEdit(params) {
     event.preventDefault();
     async function updatePost() {
       try {
-        await patch(`http://localhost:5000/api/posts/${id}`, post);
+        await patch(`https://qna-frontend.onrender.com/api/posts/${id}`, post);
         toast.success("Updated Successfully", {
           position: "top-right",
           autoClose: 1000,

@@ -7,7 +7,7 @@ const BlogContent = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       const res = await axios.get(
-        "http://localhost:5000/api/posts/fetch/answeredPosts"
+        "https://qna-frontend.onrender.com/api/posts/fetch/answeredPosts"
       );
       setBlogs(res.data);
     };

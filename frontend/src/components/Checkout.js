@@ -45,12 +45,17 @@ const Checkout = ({ post }) => {
 
   useEffect(() => {
     if (success) {
-      alert('success')
+      alert("success");
       const fetchFile = async () => {
         try {
           const token = localStorage.token;
-          await axios.get('http://localhost:5000/check', {headers: {'x-auth-token': token}});
-          const res = await axios.get(`http://localhost:5000/file/${post.answer}`, {responseType: "blob", headers: {'x-auth-token': token}});
+          await axios.get("https://qna-frontend.onrender.com/check", {
+            headers: { "x-auth-token": token },
+          });
+          const res = await axios.get(
+            `https://qna-frontend.onrender.com/file/${post.answer}`,
+            { responseType: "blob", headers: { "x-auth-token": token } }
+          );
 
           const url = window.URL.createObjectURL(res.data);
           const link = document.createElement("a");

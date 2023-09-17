@@ -61,7 +61,7 @@ const PostBlog = () => {
       newData.append("file", file);
       await axios({
         method: "post",
-        url: `http://localhost:5000/api/file/${data.post._id}`,
+        url: `https://qna-frontend.onrender.com/api/file/${data.post._id}`,
         data: newData,
       });
     }
