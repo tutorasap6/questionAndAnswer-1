@@ -1,4 +1,4 @@
-export const host = "https://qna-frontend.onrender.com";
+export const host = "http://95.216.104.112:5000";
 export const loginRoute = `${host}/api/auth/login`;
 export const postRoute = `${host}/api/posts`;
 export const getPostsRoute = `${host}/api/posts/pull`;

@@ -30,7 +30,7 @@ const Login = () => {
       localStorage.setItem("token", data.token);
       const res = await axios({
         method: "GET",
-        url: "https://qna-frontend.onrender.com/api/auth",
+        url: "http://95.216.104.112:5000/api/auth",
         headers: {
           "x-auth-token": data.token,
         },

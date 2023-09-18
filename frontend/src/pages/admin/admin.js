@@ -20,7 +20,7 @@ const AdminPage = () => {
     const fetchUser = async () => {
       const res = await axios({
         method: "GET",
-        url: "https://qna-frontend.onrender.com/api/auth",
+        url: "http://95.216.104.112:5000/api/auth",
         headers: {
           "x-auth-token": token,
         },

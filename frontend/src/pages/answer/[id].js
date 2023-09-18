@@ -20,7 +20,7 @@ const AnswerPage = (params) => {
       const getPostById = async () => {
         try {
           const response = await axios.get(
-            `https://qna-frontend.onrender.com/api/posts/${id}`
+            `http://95.216.104.112:5000/api/posts/${id}`
           );
           setPost(response.data);
         } catch (error) {

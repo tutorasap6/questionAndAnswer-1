@@ -24,7 +24,7 @@ function PostEdit(params) {
       async function updatePost() {
         try {
           const response = await get(
-            `https://qna-frontend.onrender.com/api/posts/${id}`
+            `http://95.216.104.112:5000/api/posts/${id}`
           );
           setTemp(response.data);
           setPost(response.data);
@@ -42,7 +42,7 @@ function PostEdit(params) {
     event.preventDefault();
     async function updatePost() {
       try {
-        await patch(`https://qna-frontend.onrender.com/api/posts/${id}`, post);
+        await patch(`http://95.216.104.112:5000/api/posts/${id}`, post);
         toast.success("Updated Successfully", {
           position: "top-right",
           autoClose: 1000,

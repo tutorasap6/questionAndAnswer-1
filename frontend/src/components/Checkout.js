@@ -49,11 +49,11 @@ const Checkout = ({ post }) => {
       const fetchFile = async () => {
         try {
           const token = localStorage.token;
-          await axios.get("https://qna-frontend.onrender.com/check", {
+          await axios.get("http://95.216.104.112:5000/check", {
             headers: { "x-auth-token": token },
           });
           const res = await axios.get(
-            `https://qna-frontend.onrender.com/file/${post.answer}`,
+            `http://95.216.104.112:5000/file/${post.answer}`,
             { responseType: "blob", headers: { "x-auth-token": token } }
           );
 

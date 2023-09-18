@@ -27,7 +27,7 @@ function CrudDetails(params) {
       async function getCrudById() {
         try {
           const response = await axios.get(
-            `https://qna-frontend.onrender.com/api/posts/${id}`
+            `http://95.216.104.112:5000/api/posts/${id}`
           );
           setCrud(response.data);
         } catch (error) {
@@ -52,7 +52,7 @@ function CrudDetails(params) {
       data.append("file", file);
       const res = await axios({
         method: "post",
-        url: `https://qna-frontend.onrender.com/api/posts/upload/${id}`,
+        url: `http://95.216.104.112:5000/api/posts/upload/${id}`,
         data: data,
       });
       navigate("/");
@@ -264,7 +264,7 @@ function CrudDetails(params) {
               {crud.file && (
                 <div>
                   <FileViewer
-                    filePath={`https://qna-frontend.onrender.com/${crud.file}`}
+                    filePath={`http://95.216.104.112:5000/${crud.file}`}
                     fileType={
                       crud.file.split(".")[crud.file.split(".").length - 1]
                     }

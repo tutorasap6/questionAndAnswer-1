@@ -14,7 +14,7 @@ function PostDelete(props) {
       async function deletePostById() {
         try {
           const response = await axios.get(
-            `https://qna-frontend.onrender.com/api/posts/${props.id}`
+            `http://95.216.104.112:5000/api/posts/${props.id}`
           );
           console.log(response);
           setPost(response.data);
@@ -31,7 +31,7 @@ function PostDelete(props) {
   async function handleDelete() {
     try {
       await axios.delete(
-        `https://qna-frontend.onrender.com/api/posts/${props.id}`
+        `http://95.216.104.112:5000/api/posts/${props.id}`
       );
       navigate("/admin/admin");
     } catch (error) {
